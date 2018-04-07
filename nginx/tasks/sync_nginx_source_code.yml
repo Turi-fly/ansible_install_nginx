@@ -1,0 +1,9 @@
+---
+# Publisher synchronization nginx source package and extend packages to the installation remote machine
+# 2018-04-07 22:22 by liubaobao at WDTY company
+
+
+- name: Unarchive Nginx Sorce Code to Remote Machice
+  copy: src={{ NGINX }}.tgz dest=/tmp/{{ NGINX }}.tgz
+  ignore_errors: True
+  tags: syncnginx

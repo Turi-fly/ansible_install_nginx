@@ -1,0 +1,24 @@
+---
+# Perform source code compilation and installation nginx
+# 2018-04-04 19:54 by liubaobao at WDTY company
+
+
+- name: Create a few install directories
+  file: path=/home/yx/server/nginx recurse=true state=directory
+  ignore_errors: True
+  tags: createdir
+
+- name: Configure the build.
+  command: ./configure {{ NGINXCONFIGURE }}
+  args:
+    chdir: /tmp/{{ NGINX }}/
+
+- name: Build Nginx
+  command: make -j
+  args:
+    chdir: /tmp/{{ NGINX }}/
+
+- name: Install Nginx
+  shell: make install
+  args:
+    chdir: /tmp/{{ NGINX }}/

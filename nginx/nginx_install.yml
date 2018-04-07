@@ -1,0 +1,5 @@
+---
+- hosts: hlist
+  gather_facts: False
+  roles:
+   - nginx

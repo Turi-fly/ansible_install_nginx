@@ -1,0 +1,6 @@
+---
+#start php for script
+#2018-04-07 23:30 by liubaobao at WDTY company
+
+- name: Restart php
+  command: /home/yx/server/nginx/sbin/nginx

@@ -1,0 +1,6 @@
+---
+# tasks file for nginx
+- include: sync_nginx_source_code.yml
+- include: decompression_source_package.yml
+- include: install_nginx.yml
+- include: restart_nginx.yml

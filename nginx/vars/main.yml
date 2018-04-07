@@ -1,0 +1,4 @@
+---
+# vars file for nginx
+NGINX: nginx-1.11.0
+NGINXCONFIGURE: --prefix=/home/yx/server/nginx
